@@ -1,17 +1,17 @@
-# UOB Singapore Banking App — Specification
+# HB Singapore Banking App — Specification
 
 ## 1. Concept & Vision
 
-A mobile-first Singapore banking app inspired by UOB Mighty, capturing the calm confidence of a trusted bank. Clean, professional, and quietly premium — not flashy. Feels like holding a well-made physical card: solid, reliable, no noise.
+A mobile-first Singapore banking app inspired by HB Mighty, capturing the calm confidence of a trusted bank. Clean, professional, and quietly premium — not flashy. Feels like holding a well-made physical card: solid, reliable, no noise.
 
 ## 2. Design Language
 
 ### Aesthetic Direction
-Corporate minimalism meets warm trust. UOB green anchors the palette. White card surfaces float over subtle gray backgrounds. Dense information presented with clear hierarchy. No gradients on large areas — subtle depth through shadow and layering only.
+Corporate minimalism meets warm trust. HB green anchors the palette. White card surfaces float over subtle gray backgrounds. Dense information presented with clear hierarchy. No gradients on large areas — subtle depth through shadow and layering only.
 
 ### Color Palette
 ```
---uob-green:      #007569   /* Primary — UOB's heritage green */
+--uob-green:      #007569   /* Primary — HB's heritage green */
 --uob-green-dark: #005A51   /* Pressed states */
 --uob-green-light:#E8F5F3   /* Light backgrounds */
 --uob-gold:       #C4A84B   /* Accent — Wealth pages */
@@ -95,7 +95,7 @@ Corporate minimalism meets warm trust. UOB green anchors the palette. White card
 - Pull-to-refresh (skeleton → data)
 
 ### 4.3 Transfer Money
-- **To UOB Account** — select from saved beneficiaries or enter new
+- **To HB Account** — select from saved beneficiaries or enter new
 - **To Other Bank (PayNow)** — enter mobile/email/NRIC + amount
 - **To Singapore Bank (FAST)** — bank dropdown, account number, amount
 - Amount input: large numeric keypad style
@@ -104,7 +104,7 @@ Corporate minimalism meets warm trust. UOB green anchors the palette. White card
 
 ### 4.4 QR Pay
 - **Generate QR** — amount entry, expiry toggle (1hr/6hr/custom), animated QR display
-- **Scan QR** — camera viewfinder overlay, detect UOB/PayNow QR codes
+- **Scan QR** — camera viewfinder overlay, detect HB/PayNow QR codes
 - QR contains: payment info, amount (optional), expiry
 
 ### 4.5 Cards
@@ -151,7 +151,7 @@ Corporate minimalism meets warm trust. UOB green anchors the palette. White card
 - Hover: subtle bg highlight
 
 ### CardItem
-- Card art (CSS gradient, UOB green base), card name, last 4 digits
+- Card art (CSS gradient, HB green base), card name, last 4 digits
 - Tap → CardDetail bottom sheet
 - Freeze toggle with ice-blue tint when frozen
 
@@ -167,7 +167,7 @@ Corporate minimalism meets warm trust. UOB green anchors the palette. White card
 
 ### BottomNavBar
 - 5 tabs, icon + label
-- Active: UOB green icon, bold label
+- Active: HB green icon, bold label
 - Inactive: gray icon + label
 - Safe area padding at bottom
 

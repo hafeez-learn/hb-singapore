@@ -35,7 +35,7 @@ export default function Login() {
           <div className="w-16 h-16 rounded-2xl bg-uob-green flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">U</span>
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">UOB Singapore</h1>
+          <h1 className="text-2xl font-bold text-gray-900">HB Singapore</h1>
           <p className="text-gray-500 text-sm mt-1">Welcome back</p>
         </div>
 

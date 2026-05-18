@@ -41,7 +41,7 @@ export default function Signup() {
             <span className="text-white font-bold text-2xl">U</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
-          <p className="text-gray-500 text-sm mt-1">Join UOB Singapore</p>
+          <p className="text-gray-500 text-sm mt-1">Join HB Singapore</p>
         </div>
 
         <form onSubmit={handleSignup} className="space-y-4">

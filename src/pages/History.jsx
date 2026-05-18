@@ -8,7 +8,7 @@ const MOCK_ALL = [
   { id: '3', type: 'debit', category: 'transfer', description: 'Transfer to Sarah Tan', amount: -500.00, date: 'Yesterday, 6:15 PM' },
   { id: '4', type: 'debit', category: 'transport', description: 'EZ-Link Top-up', amount: -30.00, date: 'Yesterday, 6:14 PM' },
   { id: '5', type: 'debit', category: 'shopping', description: 'Shopee Singapore', amount: -124.90, date: 'Yesterday, 2:30 PM' },
-  { id: '6', type: 'credit', category: 'cashback', description: 'UOB Cashback Rebate', amount: 15.00, date: '16 May, 12:00 AM' },
+  { id: '6', type: 'credit', category: 'cashback', description: 'HB Cashback Rebate', amount: 15.00, date: '16 May, 12:00 AM' },
   { id: '7', type: 'debit', category: 'bills', description: 'SP Services', amount: -189.00, date: '15 May, 10:00 AM' },
   { id: '8', type: 'debit', category: 'bills', description: 'Starhub Mobile', amount: -42.50, date: '14 May, 9:00 AM' },
   { id: '9', type: 'debit', category: 'dining', description: 'McDonald\'s Singapore', amount: -18.70, date: '13 May, 1:30 PM' },

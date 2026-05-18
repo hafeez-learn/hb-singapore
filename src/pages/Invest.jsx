@@ -6,7 +6,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, LineChart, Line, XAx
 const MOCK_HOLDINGS = [
   { symbol: 'DBS', name: 'DBS Group Holdings', shares: 100, avgCost: 32.50, currentPrice: 35.80, sector: 'Bank' },
   { symbol: 'OCBC', name: 'OCBC Bank', shares: 150, avgCost: 12.80, currentPrice: 13.45, sector: 'Bank' },
-  { symbol: 'UOB', name: 'United Overseas Bank', shares: 80, avgCost: 28.20, currentPrice: 31.10, sector: 'Bank' },
+  { symbol: 'HB', name: 'HB Bank', shares: 80, avgCost: 28.20, currentPrice: 31.10, sector: 'Bank' },
   { symbol: 'Singtel', name: 'Singapore Telecommunications', shares: 200, avgCost: 3.20, currentPrice: 2.95, sector: 'Telecom' },
   { symbol: 'Keppel', name: 'Keppel Corporation', shares: 50, avgCost: 7.80, currentPrice: 8.25, sector: 'Conglomerate' },
 ]
@@ -24,7 +24,7 @@ const INDICES = [
   { name: 'STI', value: '3,287.45', change: '+0.82%', up: true },
   { name: 'DBS', value: '35.80', change: '+1.12%', up: true },
   { name: 'OCBC', value: '13.45', change: '+0.67%', up: true },
-  { name: 'UOB', value: '31.10', change: '-0.32%', up: false },
+  { name: 'HB Bank', value: '31.10', change: '-0.32%', up: false },
 ]
 
 export default function Invest() {

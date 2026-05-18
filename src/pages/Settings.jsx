@@ -67,7 +67,7 @@ export default function Settings() {
           </div>
         </button>
 
-        <p className="text-center text-xs text-gray-400 pt-2">UOB Singapore Demo v1.0.0</p>
+        <p className="text-center text-xs text-gray-400 pt-2">HB Singapore Demo v1.0.0</p>
       </div>
     </div>
   )

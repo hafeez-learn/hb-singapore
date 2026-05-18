@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, User, Smartphone, Building2, CheckCircle } from 'lucide-react'
 
 const TRANSFER_TYPES = [
-  { id: 'uob', label: 'To UOB Account', icon: User, desc: 'Instant transfer to another UOB account' },
+  { id: 'uob', label: 'To HB Account', icon: User, desc: 'Instant transfer to another HB account' },
   { id: 'paynow', label: 'PayNow', icon: Smartphone, desc: 'Send money using mobile, email or NRIC' },
   { id: 'fast', label: 'Other Banks (FAST)', icon: Building2, desc: 'Interbank transfer via Singapore FAST network' },
 ]
 
 const RECENT_BENEFICIARIES = [
-  { name: 'Sarah Tan', number: '****8834', bank: 'UOB' },
+  { name: 'Sarah Tan', number: '****8834', bank: 'HB' },
   { name: 'John Lim', number: '****2291', bank: 'DBS' },
   { name: 'Maya Lee', number: '****7652', bank: 'OCBC' },
 ]
 
-const BANKS = ['DBS', 'OCBC', 'UOB', 'Citibank', 'Maybank', 'Standard Chartered', 'HSBC']
+const BANKS = ['DBS', 'OCBC', 'HB Bank', 'Citibank', 'Maybank', 'Standard Chartered', 'HSBC']
 
 export default function Transfer() {
   const [step, setStep] = useState('type') // type -> details -> confirm -> success
@@ -35,7 +35,7 @@ export default function Transfer() {
     if (parseFloat(form.amount) > 0) setStep('confirm')
   }
 
-  const getFee = () => form.amount && parseFloat(form.amount) > 0 ? (transferType === 'uob' ? 'Free' : 'S$0.12') : '—'
+  const getFee = () => form.amount && parseFloat(form.amount) > 0 ? (transferType === 'hb' ? 'Free' : 'S$0.12') : '—'
 
   if (step === 'success') return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-bg px-6">
@@ -93,11 +93,11 @@ export default function Transfer() {
             </button>
           </div>
 
-          {transferType === 'uob' && (
+          {transferType === 'hb' && (
             <div className="bg-white rounded-2xl p-5 shadow-sm">
               <p className="text-sm font-semibold text-gray-700 mb-3">Recent Beneficiaries</p>
               <div className="space-y-2">
-                {RECENT_BENEFICIARIES.filter(b => b.bank === 'UOB').map(b => (
+                {RECENT_BENEFICIARIES.filter(b => b.bank === 'HB').map(b => (
                   <button key={b.name} onClick={() => setForm(f => ({ ...f, toAccount: b.number }))}
                     className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 text-left">
                     <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-600">

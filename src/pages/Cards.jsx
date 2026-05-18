@@ -4,9 +4,9 @@ import { ArrowLeft, Plus, Snowflake, Eye, EyeOff, CreditCard, TrendingUp, Utensi
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 
 const MOCK_CARDS = [
-  { id: '1', type: 'physical', name: 'UOB Lady\'s Card', last4: '8821', expiry: '09/27', frozen: false, limit: 5000, spent: 1234.56, color: '#007569' },
-  { id: '2', type: 'virtual', name: 'UOB Virtual Card', last4: '3341', expiry: '12/26', frozen: false, limit: 1000, spent: 230.00, color: '#1A1F36' },
-  { id: '3', type: 'physical', name: 'UOB Pride Card', last4: '5509', expiry: '03/28', frozen: true, limit: 3000, spent: 890.20, color: '#C4A84B' },
+  { id: '1', type: 'physical', name: 'HB Lady\'s Card', last4: '8821', expiry: '09/27', frozen: false, limit: 5000, spent: 1234.56, color: '#007569' },
+  { id: '2', type: 'virtual', name: 'HB Virtual Card', last4: '3341', expiry: '12/26', frozen: false, limit: 1000, spent: 230.00, color: '#1A1F36' },
+  { id: '3', type: 'physical', name: 'HB Pride Card', last4: '5509', expiry: '03/28', frozen: true, limit: 3000, spent: 890.20, color: '#C4A84B' },
 ]
 
 const SPENDING = [
@@ -57,7 +57,7 @@ export default function Cards() {
               <div className="flex items-start justify-between mb-8">
                 <p className="font-semibold text-white/90 text-sm">{card.name}</p>
                 <div className="w-10 h-7 rounded bg-white/20 flex items-center justify-center">
-                  <span className="text-[9px] font-bold text-white">UOB</span>
+                  <span className="text-[9px] font-bold text-white">HB</span>
                 </div>
               </div>
               <div className="flex items-center gap-3 mb-4">

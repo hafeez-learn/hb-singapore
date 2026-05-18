@@ -10,7 +10,7 @@ test.describe('Authentication', () => {
   test('Login page renders correctly', async ({ page }) => {
     await page.goto(`${BASE}/login`, { waitUntil: 'commit' })
     await page.waitForTimeout(2000)
-    await expect(page.getByText('UOB Singapore')).toBeVisible()
+    await expect(page.getByText('HB Singapore')).toBeVisible()
     await expect(page.getByPlaceholder('your@email.com')).toBeVisible()
     await expect(page.getByPlaceholder('••••••••')).toBeVisible()
     await expect(page.getByRole('button', { name: 'Sign In' })).toBeVisible()
@@ -27,7 +27,7 @@ test.describe('Authentication', () => {
   test('Login form validation — email only', async ({ page }) => {
     await page.goto(`${BASE}/login`, { waitUntil: 'commit' })
     await page.waitForTimeout(2000)
-    await page.getByPlaceholder('your@email.com').fill('test@uob.com')
+    await page.getByPlaceholder('your@email.com').fill('test@hb.com')
     const btn = page.getByRole('button', { name: 'Sign In' })
     await expect(btn).toBeDisabled()
   })
@@ -51,7 +51,7 @@ test.describe('Authentication', () => {
   test('Password strength meter shows weak/strong', async ({ page }) => {
     await page.goto(`${BASE}/signup`, { waitUntil: 'commit' })
     await page.waitForTimeout(2000)
-    await page.getByPlaceholder('your@email.com').fill('test@uob.com')
+    await page.getByPlaceholder('your@email.com').fill('test@hb.com')
     await page.getByPlaceholder('Jane Doe').fill('Test User')
     // type short password
     await page.getByPlaceholder('Min. 6 characters').fill('abc')
@@ -126,7 +126,7 @@ test.describe('Bottom Navigation', () => {
     // Manually set mock auth in localStorage then go home
     await page.evaluate(() => {
       localStorage.setItem('firebase:auth:loggedIn', 'true')
-      localStorage.setItem('mockUser', JSON.stringify({ uid: 'test-uid', email: 'demo@uob.com', displayName: 'Hafeez Demo' }))
+      localStorage.setItem('mockUser', JSON.stringify({ uid: 'test-uid', email: 'demo@hb.com', displayName: 'Hafeez Demo' }))
     })
     await page.goto(`${BASE}/`, { waitUntil: 'commit', timeout: 8000 })
     await page.waitForTimeout(1500)
@@ -191,28 +191,28 @@ test.describe('Home Page', () => {
 test.describe('Transfer Page', () => {
   test('Transfer page loads with three transfer types', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await expect(page.getByText('To UOB Account')).toBeVisible()
+    await expect(page.getByText('To HB Account')).toBeVisible()
     await expect(page.getByText('PayNow')).toBeVisible()
     await expect(page.getByText('Other Banks (FAST)')).toBeVisible()
   })
 
   test('Selecting transfer type shows details', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await expect(page.getByText('Amount to transfer')).toBeVisible()
     await expect(page.getByText('Tap to enter amount')).toBeVisible()
   })
 
   test('Numeric keypad opens on tap to enter amount', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await page.getByText('Tap to enter amount').click()
     await expect(page.getByText('Done')).toBeVisible()
   })
 
   test('Can type amount using keypad', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await page.getByText('Tap to enter amount').click()
     // Type 100
     await page.locator('button', { hasText: '1' }).click()
@@ -224,7 +224,7 @@ test.describe('Transfer Page', () => {
 
   test('Continue disabled when no amount entered', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await expect(page.getByRole('button', { name: 'Continue' })).toBeDisabled()
   })
 
@@ -243,7 +243,7 @@ test.describe('Transfer Page', () => {
 
   test('Confirm screen shows transfer details', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await page.getByText('Tap to enter amount').click()
     await page.locator('button', { hasText: '5' }).click()
     await page.locator('button', { hasText: '0' }).click()
@@ -256,7 +256,7 @@ test.describe('Transfer Page', () => {
 
   test('Success screen shows after confirming transfer', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await page.getByText('Tap to enter amount').click()
     await page.locator('button', { hasText: '2' }).click()
     await page.locator('button', { hasText: '0' }).click()
@@ -269,7 +269,7 @@ test.describe('Transfer Page', () => {
 
   test('Back to Home button on success screen', async ({ page }) => {
     await page.goto(`${BASE}/transfer`, { waitUntil: 'domcontentloaded' })
-    await page.getByText('To UOB Account').click()
+    await page.getByText('To HB Account').click()
     await page.getByText('Tap to enter amount').click()
     await page.locator('button', { hasText: '1' }).click()
     await page.getByText('Done').click()
@@ -330,8 +330,8 @@ test.describe('QR Pay Page', () => {
 test.describe('Cards Page', () => {
   test('Cards page loads with card list', async ({ page }) => {
     await page.goto(`${BASE}/cards`, { waitUntil: 'domcontentloaded' })
-    await expect(page.getByText("UOB Lady's Card")).toBeVisible()
-    await expect(page.getByText("UOB Virtual Card")).toBeVisible()
+    await expect(page.getByText("HB Lady's Card")).toBeVisible()
+    await expect(page.getByText("HB Virtual Card")).toBeVisible()
   })
 
   test('Card shows last 4 digits', async ({ page }) => {

@@ -17,9 +17,9 @@ export default function QRPay() {
   const generateQR = () => {
     if (!amount || parseFloat(amount) <= 0) return
     const payload = {
-      uob: true,
+      hb: true,
       amount: parseFloat(amount),
-      from: 'UOB MIGHTY',
+      from: 'HB MIGHTY',
       ref: `QR${Date.now().toString().slice(-8)}`,
       expiry: Date.now() + expiry * 1000,
     }
